@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지뢰찾기 프리미엄</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Outfit:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <header class="game-header">
+            <h1 class="title">지뢰찾기</h1>
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <span class="stat-label">지뢰</span>
+                    <span class="stat-value" id="mine-count">010</span>
+                </div>
+                <div class="controls">
+                    <button id="reset-btn" class="game-btn reset-btn" aria-label="Reset Game">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C14.8273 3 17.35 4.30367 19 6.34267V3H21V9H15V7H18.329C17.0115 5.18554 14.6738 4 12 4C7.58172 4 5 6.58172 5 11C5 15.4183 7.58172 18 12 18C15.361 18 18.216 15.9231 19.9 13H21.93C20.0469 17.0624 16.331 20 12 20"
+                                fill="currentColor" />
+                        </svg>
+                    </button>
+                    <select id="difficulty-select" class="difficulty-select">
+                        <option value="easy">초급</option>
+                        <option value="medium">중급</option>
+                        <option value="hard">고급</option>
+                    </select>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">시간</span>
+                    <span class="stat-value" id="timer">000</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="game-board-container">
+            <div id="game-board" class="game-board">
+                <!-- Cells will be generated here -->
+            </div>
+            <div id="game-overlay" class="game-overlay hidden">
+                <div class="overlay-content">
+                    <h2 id="game-message">게임 오버</h2>
+                    <button id="play-again-btn" class="game-btn primary-btn">다시 하기</button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="game-footer">
+            <p>우클릭: 깃발 • 좌클릭: 열기</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
